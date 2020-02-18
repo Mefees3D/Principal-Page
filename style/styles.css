@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: whitesmoke;
+    background-color: forestgreen;
+}
+.dRelative{
+    position: relative;
+}
+#dPresentacionPrincipal{
+    background-image: url(/img/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+.dfIconosNav{
+    position: absolute;
+    /* z-index: 2; */
+    top: 0%;
+    border: 1px red solid;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /*espacio del borde pantalla*/
+    padding: 3%;
+    box-sizing: border-box;
+}
+.dIconosPrincipal{   
+    border: 1px blue solid;
+}
+
+.dNav{
+    border: 1px blue solid;
+}
+
+/*BOTON MENU*/
+.botonMenu{
+    width:50px;
+    height: 50px;
+	text-align:center;
+	background-color:#161616;
+	cursor:pointer;
+}
+
+.linea{
+	width:100%;
+    border:3px solid #fff;
+    margin: auto;
+	margin-bottom: .7em;
+	transition:all .3s ease;
+}
+
+.botonMenu:hover #linea1, 
+.botonMenu:hover #linea3{
+	width:55%;
+}
+
+/*NAV*/
+.dNav nav{
+    border: 1px blue solid;
+    display: none;
+}
+.dNav ul{
+}
+.dNav ul li{
+    padding: 10px;
+    border: 1px red solid;
+    list-style: none;
+
+}
+
+
+
+
+
+
+.dTituloPrincipal{
+    border: 1px red solid;
+    /*centrar position absolute div*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /*centrar position absolute div*/
+}
+
+/*botones*/
+button {
+    
+    display: inline-block;
+    margin: 0 auto;
+    border: none;
+    background: none;
+    outline:none;
+}
+button span {
+    display: block;
+}
+/* ============== lines button =============*/
+.lines-button {
+    padding: 1rem .5rem;
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.5714285714rem;
+}
+.lines-button:hover {
+    opacity: 1;
+}
+.lines-button:active {
+    transition: 0;
+}
+.lines {
+    display: inline-block;
+    /*TAMAÑO ANTES DE ANIMACION*/
+    width: 2.5rem;
+    height: 0.5714285714rem;
+    background: #000000;
+    border-radius: 0.2857142857rem;
+    transition: 0.3s;
+    position: relative;
+}
+.lines:before, .lines:after {
+    display: inline-block;
+    /*TAMAÑO ANTES DE ANIMACION*/
+    width: 2.5rem;
+    height: 0.5714285714rem;
+    background: #000000;
+    border-radius: 0.2857142857rem;
+    transition: 0.3s;
+    position: absolute;
+    left: 0;
+    content: '';
+    -webkit-transform-origin: 0.2857142857rem center;
+    transform-origin: 0.2857142857rem center;
+}
+.lines:before {
+    top: 1rem;
+}
+.lines:after {
+    top: -1rem;
+}
+.lines-button:hover .lines:before {
+    top: 1.3428571429rem;
+}
+.lines-button:hover .lines:after {
+    top: -1.3428571429rem;
+}
+
+
+.lines-button.x2 .lines {
+    transition: background 0.3s 0.5s ease;
+}
+.lines-button.x2 .lines:before, .lines-button.x2 .lines:after {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    transition: top 0.3s 0.6s ease, -webkit-transform 0.3s ease;
+    transition: top 0.3s 0.6s ease, transform 0.3s ease;
+}
+.lines-button.x2.open .lines {
+    transition: background 0.3s 0s ease;
+    background: transparent;
+}
+.lines-button.x2.open .lines:before, .lines-button.x2.open .lines:after {
+    transition: top 0.3s ease, -webkit-transform 0.3s 0.5s ease;
+    transition: top 0.3s ease, transform 0.3s 0.5s ease;
+    top: 0;
+    /*TAMAÑO DEPUES DE ANIMACION*/
+    width: 2.5rem;
+}
+.lines-button.x2.open .lines:before {
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+}
+.lines-button.x2.open .lines:after {
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+}
